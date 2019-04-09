@@ -27,6 +27,7 @@ public class Robot extends TimedRobot {
   // running program
   public static Drivetrain m_drivetrain = null;
   public static Collector m_collector = null;
+  public static Elevator m_elevator = null;
 
   // Declare subsystems above OI and SmartDashboard/Telemetry
   public static OI m_oi;
@@ -43,6 +44,7 @@ public class Robot extends TimedRobot {
     //Tells the program to call the systems during init
     m_drivetrain = new Drivetrain();
     m_collector = new Collector();
+    m_elevator = new Elevator();
     m_oi = new OI();
 
   }

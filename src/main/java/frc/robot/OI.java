@@ -30,9 +30,8 @@ public class OI {
   Button D10 = new JoystickButton(driverController, 10);
 
   public OI() {
-    D1.whenPressed(new CollectorActuateOpen());
-    D2.whenPressed(new CollectorActuateClosed());
-    
+    D1.whileHeld(new ElevatorDrive());
+  
   }
   //// CREATING BUTTONS
   // One type of button is a joystick button which is any button on a

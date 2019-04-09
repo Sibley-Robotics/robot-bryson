@@ -14,32 +14,35 @@ package frc.robot;
  * floating around.
  */
 public class RobotMap {
-
-	public static final int DRIVETRAIN_LEFT_FRONT_SPARK = 2;
   // For example to map the left and right motors, you could define the
   // following variables to use with your drivetrain subsystem.
-  // public static int leftMotor = 1;
-  // public static int rightMotor = 2;
 
-	//public static final int DRIVETRAIN_LEFT_BACK_SPARK = 2;
-	public static final int DRIVETRAIN_RIGHT_FRONT_SPARK = 1;
-  //public static final int DRIVETRAIN_RIGHT_BACK_SPARK = 1;
-  
-  //Joystick
-	public static final int OI_DRIVER_CONTROLLER = 0;
+    //Drivetrain
+  //Set which ports the drivetrain sparks are on
+  public static final int DRIVETRAIN_LEFT_SPARK = 2;
+  public static final int DRIVETRAIN_RIGHT_SPARK = 1;
+      
+    //Collector
+  //Set which port the solenoid is on
+  public static final int COLLECTOR_SOLENOID_OPEN = 0;
+  public static final int COLLECTOR_SOLENOID_CLOSE = 1;
+  //Set which port the collector motor's sparks are on
+  public static final int CLAW_MOTOR_SPARK = 3;
+    
+    //Joystick
+  //Set which port the Driver Controller is on
+  public static final int OI_DRIVER_CONTROLLER = 0;
+  //Set which port from the driverstation interface is each axis
 	public static final int DRIVER_CONTROLLER_ROTATE_AXIS = 4;
   public static final int DRIVER_CONTROLLER_MOVE_AXIS = 1;
-  //Collector
-//	public static final int COLLECTOR_ACTUATE_SOLENOID_DEPLOY = 0;
-//	public static final int COLLECTOR_ACTUATE_SOLENOID_RETRACT = 1;
+  public static final int DRIVER_CONTROLLER_RIGHT_TRIGGER = 2;
+  public static final int DRIVER_CONTROLLER_LEFT_TRIGGER = 3;
+  public static final int ELEVATOR_MOTOR_SPARK = 4;
+  public static final int DRIVER_CONTROLLER_LEFT_BUMPER = 5;
+  public static final int DRIVER_CONTROLLER_RIGHT_BUMPER = 6;
+}
 
-public static final int COLLECTOR_SOLENOID_OPEN = 0;
-public static final int COLLECTOR_SOLENOID_CLOSE = 1;
-
-  
-
-  // If you are using multiple modules, make sure to define both the port
+// If you are using multiple modules, make sure to define both the port
   // number and the module. For example you with a rangefinder:
   // public static int rangefinderPort = 1;
   // public static int rangefinderModule = 1;
-}

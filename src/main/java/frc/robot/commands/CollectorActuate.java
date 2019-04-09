@@ -13,11 +13,11 @@ import frc.robot.Robot;
 /**
  * Add your docs here.
  */
-public class CollectorActuateClosed extends InstantCommand {
+public class CollectorActuate extends InstantCommand {
   /**
    * Add your docs here.
    */
-  public CollectorActuateClosed() {
+  public CollectorActuate() {
     super();
     requires(Robot.m_collector);
   }
@@ -25,7 +25,7 @@ public class CollectorActuateClosed extends InstantCommand {
   // Called once when the command executes
   @Override
   protected void initialize() {
-    Robot.m_collector.actuateCollectorClosed();
+    Robot.m_collector.actuateCollector();
   }
 
 }

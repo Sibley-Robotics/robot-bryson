@@ -5,27 +5,28 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package frc.robot.commands;
+package frc.robot.subsystems;
 
-import edu.wpi.first.wpilibj.command.InstantCommand;
-import frc.robot.Robot;
-
+import edu.wpi.first.wpilibj.Spark;
+import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.*;
+import frc.robot.commands.ElevatorDrive;
 /**
  * Add your docs here.
  */
-public class CollectorActuateOpen extends InstantCommand {
-  /**
-   * Add your docs here.
-   */
-  public CollectorActuateOpen() {
-    super();
-    requires(Robot.m_collector);
+public class Elevator extends Subsystem {
+  Spark elevatorMotor = null;
+
+  public Elevator() {
+    elevatorMotor = new Spark(RobotMap.ELEVATOR_MOTOR_SPARK);
   }
 
-  // Called once when the command executes
+  public void driveElevator(double elevateSpeed){
+    elevatorMotor.set(elevateSpeed);
+  }
+
   @Override
-  protected void initialize() {
-    Robot.m_collector.actuateCollectorOpen();
+  public void initDefaultCommand() {
+    setDefaultCommand(new ElevatorDrive());
   }
-
 }

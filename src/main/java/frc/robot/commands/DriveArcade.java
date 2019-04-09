@@ -7,6 +7,7 @@
 
 package frc.robot.commands;
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import frc.robot.Robot;
 import frc.robot.RobotMap;
 
@@ -28,17 +29,20 @@ public class DriveArcade extends Command {
     which is assigned a port in the robot map, the port is assigned based on the axis in the 
     driverstation view of the controller
     */
+    
     double moveSpeed = -Robot.m_oi.driverController.getRawAxis(RobotMap.DRIVER_CONTROLLER_MOVE_AXIS);
     double rotateSpeed = Robot.m_oi.driverController.getRawAxis(RobotMap.DRIVER_CONTROLLER_ROTATE_AXIS);
-    //Feed the method robotDrive the axis value for "moveSpeed" and "rotateSpeed"
-    Robot.m_drivetrain.robotDrive(moveSpeed, rotateSpeed);
-  }
 
-  // Make this return true when this Command no longer needs to run execute()
+    SmartDashboard.putNumber("Left/Right Turn", rotateSpeed);
+    SmartDashboard.putNumber("Forward/Backward Drive", moveSpeed);
+    //Feed the method robotDrive the axis value for "moveSpeed" and "rotateSpeed"
+
+    Robot.m_drivetrain.robotDrive(moveSpeed, rotateSpeed);
+    
+  }
+  
   @Override
   protected boolean isFinished() {
-    //Returns false so the program never finishes after the data above has been passed, runs repeatedly until 
-    // the drive code is no longer called
     return false;
   }
 
