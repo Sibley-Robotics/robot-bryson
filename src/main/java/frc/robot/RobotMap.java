@@ -12,22 +12,21 @@ package frc.robot;
  * to a variable name. This provides flexibility changing wiring, makes checking
  * the wiring easier and significantly reduces the number of magic numbers
  * floating around.
+ * 
+ * The number it is equal to is the PWM port on the RIO or number of axis from driverstation for controllers or CAN bus port for solenoid or talons
  */
 public class RobotMap {
-  // For example to map the left and right motors, you could define the
-  // following variables to use with your drivetrain subsystem.
-
     //Drivetrain
   //Set which ports the drivetrain sparks are on
   public static final int DRIVETRAIN_LEFT_SPARK = 2;
   public static final int DRIVETRAIN_RIGHT_SPARK = 1;
       
     //Collector
-  //Set which port the solenoid is on
   public static final int COLLECTOR_SOLENOID_OPEN = 0;
   public static final int COLLECTOR_SOLENOID_CLOSE = 1;
-  //Set which port the collector motor's sparks are on
   public static final int CLAW_MOTOR_SPARK = 3;
+    //Elevator
+  public static final int ELEVATOR_MOTOR_SPARK = 4;
     
     //Joystick
   //Set which port the Driver Controller is on
@@ -37,7 +36,6 @@ public class RobotMap {
   public static final int DRIVER_CONTROLLER_MOVE_AXIS = 1;
   public static final int DRIVER_CONTROLLER_RIGHT_TRIGGER = 2;
   public static final int DRIVER_CONTROLLER_LEFT_TRIGGER = 3;
-  public static final int ELEVATOR_MOTOR_SPARK = 4;
   public static final int DRIVER_CONTROLLER_LEFT_BUMPER = 5;
   public static final int DRIVER_CONTROLLER_RIGHT_BUMPER = 6;
 }

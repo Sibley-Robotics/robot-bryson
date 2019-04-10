@@ -25,7 +25,6 @@ public class Elevator extends Subsystem {
     elevatorMotor.set(elevateSpeed);
   }
 
-  @Override
   public void initDefaultCommand() {
     setDefaultCommand(new ElevatorDrive());
   }
